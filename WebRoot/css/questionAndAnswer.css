@@ -1,0 +1,14 @@
+.queList{
+	/* border:1px solid #808069; */
+	height:450px;
+	width:30%;
+	display:inline-block;
+	float:left;
+}
+.queAnswer{
+	border:1px solid #808069;
+	height:450px;
+	width:60%;
+	margin-left:5%;
+	display:inline-block;
+}
