@@ -37,7 +37,7 @@ public class UserController {
 @ResponseBody
 @RequestMapping(value="/insertClaim", produces = "text/html;charset=UTF-8",method = RequestMethod.POST)
 public void insertClaim(Claim claim,HttpServletRequest request){
-	System.out.println(claim.toString());
+	//System.out.println(claim.toString());
 	userService.insertClaim(claim, request);
 }
 
