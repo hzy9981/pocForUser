@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.poc.db.model.Assess;
 import com.poc.db.model.Claim;
+import com.poc.db.model.ClaimUserViewCommand;
 import com.poc.db.model.Policy;
 import com.poc.db.model.User;
 
@@ -19,5 +20,5 @@ public interface UserService {
    
    public List<Assess> showAssess(Assess assess,HttpServletRequest request);
    
-   public List<Claim> showClaims(Claim claim,HttpServletRequest request);
+   public List<ClaimUserViewCommand> showClaims(HttpServletRequest request);
 }

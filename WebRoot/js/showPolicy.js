@@ -27,7 +27,7 @@ var showAllPolicyByUserId =function(loginedUserId){
 				$.each(data,function(i,policy){
 					i++;
 					tableInfo +="<tr><td>" +i+"</td>"+
-					"<td>"+policy['poid'] +"</td>"+
+					"<td>"+policy['policyid'] +"</td>"+
 					"<td>"+policy['policyType'] +"</td>"+
 					"<td>"+policy['recognizee'] +"</td>"+
 					"<td>"+policy['plateNumber'] +"</td>"+

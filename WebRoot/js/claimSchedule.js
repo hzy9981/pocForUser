@@ -21,7 +21,7 @@ var claimSchedule =function(){
 				tableInfo +="<tr><td>" +i+"</td>"+
 				"<td>"+claim['caseid'] +"</td>"+
 				"<td>"+claim['plateNumber'] +"</td>"+
-				"<td>"+"¥"+claim['sum'] +"</td>"+
+				"<td>"+"¥"+claim['assess']['sum'] +"</td>"+
 				"<td>"+claim['claimTime'] +"</td>"+
 				"<td>"+claim['status'] +"</td>"+
 				"<td><a href='#'>详 情</a></td></tr>";

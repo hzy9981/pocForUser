@@ -22,6 +22,7 @@ import com.poc.db.dao.UserMapper;
 import com.poc.db.dao.AssessMapper;
 import com.poc.db.model.Assess;
 import com.poc.db.model.Claim;
+import com.poc.db.model.ClaimUserViewCommand;
 import com.poc.db.model.Policy;
 import com.poc.db.model.User;
 import com.poc.service.UserService;
@@ -44,6 +45,8 @@ public class UserServiceImpl implements UserService{
 	
 	@Autowired
 	private AssessMapper assessMapper;
+	
+	
 	
 	
 	@Override
@@ -74,7 +77,7 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public List<Policy> showAllPolicyByUserId(HttpServletRequest request) {
-		return policyMapper.showAllPolicyByUserId(CookieUtil.getCookieByName(request,"loginedUserId").toString());
+		return policyMapper.showAllPolicyByUserId(CookieUtil.getCookieByName(request,"loginedUserId").getValue().split(",")[0]);
 	}
 
 	@Override
@@ -96,9 +99,10 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public List<Claim> showClaims(Claim claim, HttpServletRequest request) {
+	public List<ClaimUserViewCommand> showClaims(HttpServletRequest request) {
 		// TODO Auto-generated method stub
+		Claim claim = new Claim();
 		claim.setApplyUser(CookieUtil.getCookieByName(request,"loginedUserId").getValue().split(",")[0]);
-		return claimMapper.showClaims(claim);
+		return claimMapper.showClaimUserViewCommand(claim);
 	}
 }

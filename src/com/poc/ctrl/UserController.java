@@ -3,6 +3,9 @@ package com.poc.ctrl;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.spi.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,6 +20,9 @@ import com.poc.util.JSONUtils;
 
 @Controller
 public class UserController {
+	
+	protected Log log = LogFactory.getLog(getClass());
+	
  @Autowired
  private UserService userService;
  
@@ -37,7 +43,7 @@ public class UserController {
 @ResponseBody
 @RequestMapping(value="/insertClaim", produces = "text/html;charset=UTF-8",method = RequestMethod.POST)
 public void insertClaim(Claim claim,HttpServletRequest request){
-	System.out.println(claim.toString());
+	//System.out.println(claim.toString());
 	userService.insertClaim(claim, request);
 }
 
@@ -50,8 +56,8 @@ public String showAssess(Assess assess,HttpServletRequest request){
 
 @ResponseBody
 @RequestMapping(value="/showClaims", produces = "text/html;charset=UTF-8",method = RequestMethod.POST)
-public String showClaims(Claim claim,HttpServletRequest request){ 
-	return JSONUtils.toJSONString(userService.showClaims(claim, request));
+public String showClaims(HttpServletRequest request){ 
+	return JSONUtils.toJSONString(userService.showClaims(request));
 	//return JSONUtils.toJSONString(userService.showAssess(assess, request));
 }
 }

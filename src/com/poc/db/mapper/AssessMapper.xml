@@ -59,9 +59,9 @@
   
   <select id="showAssess" resultMap="BaseResultMap" parameterType="java.lang.String" >
   select 
-   asid, assess.id, caseid, plate_Number, sum, photo, apply_User, apply_User_Phone,assessor.asname assessor, 
+   asid, assess.id, caseid, plate_Number, sum, photo, apply_User, apply_User_Phone,assessor, 
     DATE_FORMAT(assess_Time,'%Y年%m月%d日')assess_Time,case_Describe
-    from assess JOIN assessor ON (assessor.asorid=assess.assessor)
+    from assess
     where 1=1
     <if test="asid != null" >
        and asid = #{asid,jdbcType=VARCHAR}
