@@ -69,6 +69,12 @@
       <if test="caseid != null" >
        and caseid = #{caseid,jdbcType=VARCHAR}
       </if>
+      <if test="assessor != null" >
+       and assessor = #{assessor,jdbcType=VARCHAR}
+      </if>
+       <if test="plateNumber != null" >
+       and plate_Number = #{plateNumber,jdbcType=VARCHAR}
+      </if>
       and apply_User = #{applyUser,jdbcType=VARCHAR}
   </select>
   
