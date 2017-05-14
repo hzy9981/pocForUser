@@ -7,6 +7,7 @@ String base_Path = request.getScheme()+"://"+request.getServerName()+":"+request
 <html>
 <head>
 <!-- 公共css -->
+<title>保单查看</title>
 <%@include file="common/commoncss.jsp"%>
 <!-- 自定义css -->
 <link href="<%=base_Path%>css/showPolicy.css" rel="stylesheet">
