@@ -77,8 +77,8 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public List<Policy> showAllPolicyByUserId(HttpServletRequest request) {
-		return policyMapper.showAllPolicyByUserId(CookieUtil.getCookieByName(request,"loginedUserId").getValue().split(",")[0]);
+	public List<Policy> showAllPolicyByUserId(Policy policy,HttpServletRequest request) {
+		return policyMapper.showAllPolicyByUserId(policy.getPolicyid()==0?null:policy.getPolicyid(),policy.getPolicyType(),policy.getPlateNumber(),CookieUtil.getCookieByName(request,"loginedUserId").getValue().split(",")[0]);
 	}
 
 	@Override

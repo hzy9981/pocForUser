@@ -2,6 +2,8 @@ package com.poc.db.dao;
 
 import java.util.List;
 
+import org.apache.ibatis.annotations.Param;
+
 import com.poc.db.model.Policy;
 
 public interface PolicyMapper {
@@ -53,5 +55,5 @@ public interface PolicyMapper {
      */
     int updateByPrimaryKey(Policy record);
     
-    List<Policy> showAllPolicyByUserId(String uid);
+    List<Policy> showAllPolicyByUserId(@Param("policyid")Integer policyid,@Param("policyType")String policyType,@Param("plateNumber")String plateNumber,@Param("uid")String uid);
 }

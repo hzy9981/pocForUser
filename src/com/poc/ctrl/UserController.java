@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.poc.db.model.Assess;
 import com.poc.db.model.Claim;
+import com.poc.db.model.Policy;
 import com.poc.service.UserService;
 import com.poc.util.JSONUtils;
 
@@ -35,15 +36,13 @@ public class UserController {
  
  @ResponseBody
  @RequestMapping(value="/showAllPolicyByUserId", produces = "text/html;charset=UTF-8",method = RequestMethod.POST)
- public String showAllPolicyByUserId(@RequestParam String uid,HttpServletRequest request){ 
-	 //System.out.println(userService.showAllPolicyByUserId(uid).toString());
-	return JSONUtils.toJSONString(userService.showAllPolicyByUserId(request));
+ public String showAllPolicyByUserId(Policy policy,HttpServletRequest request){ 
+	return JSONUtils.toJSONString(userService.showAllPolicyByUserId(policy,request));
  }
 
 @ResponseBody
 @RequestMapping(value="/insertClaim", produces = "text/html;charset=UTF-8",method = RequestMethod.POST)
 public void insertClaim(Claim claim,HttpServletRequest request){
-	//System.out.println(claim.toString());
 	userService.insertClaim(claim, request);
 }
 
@@ -58,6 +57,5 @@ public String showAssess(Assess assess,HttpServletRequest request){
 @RequestMapping(value="/showClaims", produces = "text/html;charset=UTF-8",method = RequestMethod.POST)
 public String showClaims(HttpServletRequest request){ 
 	return JSONUtils.toJSONString(userService.showClaims(request));
-	//return JSONUtils.toJSONString(userService.showAssess(assess, request));
 }
 }

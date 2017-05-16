@@ -21,13 +21,10 @@ String base_Path = request.getScheme()+"://"+request.getServerName()+":"+request
 			<strong>保单展示 </strong>
 			<div class="searchTool">
 			<select id="searchCondition">
-			<option value="poid">保单号</option>
+			<option value="policyid">保单号</option>
 			<option value="policyType">保单类型</option>
 			<option value="recognizee">保险人</option>
 			<option value="plateNumber">车牌号</option>
-			<option value="sum">保单金额</option>
-			<option value="valid">生效中</option>
-			<option value="invalid">已失效</option>
 			</select>
 			<input id="searchContent" type="text" placeholder="请输入搜索的内容">
 			<button id="btn_Search" class="red icon-search btn btn-primary">搜索</button>

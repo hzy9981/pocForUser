@@ -14,7 +14,7 @@ import com.poc.db.model.User;
 public interface UserService {
    public String userLogin(String uid, String upassword,HttpServletResponse response);
    
-   public List<Policy> showAllPolicyByUserId(HttpServletRequest request);
+   public List<Policy> showAllPolicyByUserId(Policy policy,HttpServletRequest request);
    
    public void insertClaim(Claim claim,HttpServletRequest request);
    
