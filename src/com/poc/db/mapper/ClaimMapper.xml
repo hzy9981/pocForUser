@@ -24,6 +24,7 @@
     <result column="status" property="status" jdbcType="VARCHAR" />
     <result column="apply_User" property="applyUser" jdbcType="VARCHAR" />
     <result column="create_Time" property="createTime" jdbcType="VARCHAR" />
+    <result column="case_Describe" property="caseDescribe" jdbcType="LONGVARCHAR" />
   </resultMap>
   <resultMap id="ResultMapWithBLOBs" type="com.poc.db.model.Claim" extends="BaseResultMap" >
     <!--
@@ -57,9 +58,9 @@
     <result column="status" property="status" jdbcType="VARCHAR" />
     <result column="apply_User" property="applyUser" jdbcType="VARCHAR" />
     <result column="create_Time" property="createTime" jdbcType="VARCHAR" />
+    <result column="case_Describe" property="caseDescribe" jdbcType="LONGVARCHAR" />
     <association property="assess" javaType="com.poc.db.model.Assess">
-    <id column="asid" property="asid" jdbcType="VARCHAR" />
-    <result column="id" property="id" jdbcType="INTEGER" />
+    <id column="asid" property="asid" jdbcType="INTEGER" />
     <result column="caseid" property="caseid" jdbcType="VARCHAR" />
     <result column="plate_Number" property="plateNumber" jdbcType="VARCHAR" />
     <result column="sum" property="sum" jdbcType="VARCHAR" />
@@ -120,8 +121,9 @@
   
   <select id="showClaimUserViewCommand" resultMap="ClaimUserViewCommand" parameterType="java.lang.String" >
      select 
-     cl.caseid, cl.id, cl.a1id, cl.a2id, cl.recognizee, cl.plate_Number, cl.case_TIme, cl.case_Place, cl.report_Time, 
-    cl.report_Person, cl.report_Person_Mobile, cl.driver, cl.driver_Mobile, cl.claim_Time, cl.status, cl.apply_User,cl.create_Time,cl.case_Describe,ass.sum
+    cl.caseid, cl.id, cl.a1id, cl.a2id, cl.recognizee, cl.plate_Number, cl.case_TIme, cl.case_Place, cl.report_Time, 
+    cl.report_Person, cl.report_Person_Mobile, cl.driver, cl.driver_Mobile, cl.claim_Time, cl.status, cl.apply_User,
+    cl.create_Time,cl.case_Describe,ass.sum
     from claim cl,assess ass where 1=1
     <if test="plateNumber!=null">
     and cl.plate_Number = #{plateNumber}

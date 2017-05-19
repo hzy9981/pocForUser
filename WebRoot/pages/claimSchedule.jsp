@@ -46,6 +46,93 @@
 				<div id="hiddenresult" style="display:none"></div>
 			</div>
 			</div>
+			
+			<!-- 理赔单详情 -->
+	<div id="dialog" role="dialog" title="理赔单详情" class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable" style="min-width:440px;min-height: 19px; max-height: none; height: auto; display:none">
+	    <h1>理赔申请表</h1>
+	    <br>
+	    
+	    <div class="form-group form-group-inline">
+		<div><span>案件号:</span></div>
+		<label  class="form-control form-control-inline" id="caseid" ></label>
+			   <!-- <span class="glyphicon glyphicon-star" aria-hidden="true"></span> -->
+	    <div></div>
+	    </div>
+	    
+	    <div class="form-group form-group-inline">
+		<div><span>交强险保单号:</span></div>
+		<label class="form-control form-control-inline" id="a1id"></label>
+			   <div></div>
+	    </div>
+	    
+	    <div class="form-group form-group-inline">
+		<div><span>第三者责任险保单号:</span></div>
+		<label type="text" class="form-control form-control-inline" id="a2id"></label>
+			   <div></div>
+	    </div>
+	    
+	    <div class="form-group form-group-inline">
+		<div><span>被保险人:</span></div>
+		<label class="form-control form-control-inline" id="recognizee"></label>
+			   <div></div>
+			   
+	    </div>
+	    
+	    <div class="form-group form-group-inline">
+		<div><span>车牌号码:</span></div>
+		<label type="text" class="form-control form-control-inline" id="plateNumber"></label>
+			   <div></div>
+	    </div>
+	    
+	    <div class="form-group form-group-inline">
+		<div><span>出险时间:</span></div>
+		<label class="form-control form-control-inline" id="caseTime" ></label>
+			   <div></div>
+	    </div>
+	    
+	    <div class="form-group form-group-inline">
+		<div><span>出险地点:</span></div>
+		<label class="form-control form-control-inline" id="casePlace"></label>
+			   <div></div>
+	    </div>
+	    
+	    <div class="form-group form-group-inline">
+		<div><span>报案人:</span></div>
+		<label class="form-control form-control-inline" id="reportPerson" ></label>
+			   <div></div>
+	    </div>
+	    
+	    <div class="form-group form-group-inline">
+		<div><span>报案时间:</span></div>
+		<label class="form-control form-control-inline" id="reportTime" ></label>
+			   <div></div>
+	    </div>
+	    
+	    
+	    <div class="form-group form-group-inline">
+		<div><span>报案人联系电话:</span></div>
+		<label class="form-control form-control-inline" id="reportPersonMobile"></label>
+			   <div></div>
+	    </div>
+	    
+	    <div class="form-group form-group-inline">
+		<div><span>驾驶员:</span></div>
+		<label  class="form-control form-control-inline" id="driver"></label>
+			   <div></div>
+	    </div>
+	    
+	    <div class="form-group form-group-inline">
+		<div><span>联系电话:</span></div>
+		<label class="form-control form-control-inline" id="driverMobile" ></label>
+		<div></div>
+	    </div>
+	    
+	    <div class="form-group form-group-inline">
+	    <h2>案件描述</h2>
+		<textarea id="caseDescribe" name="caseDescribe" class="form-control"></textarea>
+	    </div>    
+	    </div>
+			<!-- 理赔单详情结束 -->
 			<!-- 正文内容结束 -->
 			<%@include file="common/common.jsp" %>	
 			</div>

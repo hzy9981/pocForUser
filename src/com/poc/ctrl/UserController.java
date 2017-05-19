@@ -55,7 +55,9 @@ public String showAssess(Assess assess,HttpServletRequest request){
 
 @ResponseBody
 @RequestMapping(value="/showClaims", produces = "text/html;charset=UTF-8",method = RequestMethod.POST)
-public String showClaims(HttpServletRequest request){ 
-	return JSONUtils.toJSONString(userService.showClaims(request));
+public String showClaims(Claim claim,HttpServletRequest request){ 
+	return JSONUtils.toJSONString(userService.showClaims(claim,request));
 }
+
+
 }

@@ -10,6 +10,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.crypto.Data;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,7 +36,9 @@ import com.thoughtworks.xstream.mapper.Mapper.Null;
 @Service
 @Transactional
 public class UserServiceImpl implements UserService{
-
+	
+	private static final Logger	LOGGER	= LoggerFactory.getLogger(UserServiceImpl.class);
+	
 	@Autowired
 	private UserMapper userMapper;
 	
@@ -100,9 +104,8 @@ public class UserServiceImpl implements UserService{
 	}
 
 	@Override
-	public List<ClaimUserViewCommand> showClaims(HttpServletRequest request) {
+	public List<ClaimUserViewCommand> showClaims(Claim claim, HttpServletRequest request) {
 		// TODO Auto-generated method stub
-		Claim claim = new Claim();
 		claim.setApplyUser(CookieUtil.getCookieByName(request,"loginedUserId").getValue().split(",")[0]);
 		return claimMapper.showClaimUserViewCommand(claim);
 	}

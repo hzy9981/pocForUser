@@ -47,7 +47,7 @@
     and policy_Type =  #{policyType}
     </if>
     <if test="plateNumber!=null">
-    and plateNumber = #{plateNumber}
+    and plate_Number = #{plateNumber}
     </if>
     and recognizee = #{uid,jdbcType=VARCHAR}
     order by plate_Number

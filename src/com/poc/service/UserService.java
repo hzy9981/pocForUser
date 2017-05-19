@@ -20,5 +20,5 @@ public interface UserService {
    
    public List<Assess> showAssess(Assess assess,HttpServletRequest request);
    
-   public List<ClaimUserViewCommand> showClaims(HttpServletRequest request);
+   public List<ClaimUserViewCommand> showClaims(Claim claim,HttpServletRequest request);
 }

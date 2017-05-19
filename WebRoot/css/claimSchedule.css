@@ -36,8 +36,26 @@ select {
 	font-size:25px;
 }
 .searchTool{
-float:right;	
+   float:right;	
 }
 .pagination{
    float:right;
+}
+.form-group-inline{
+	display:inline-block
+}
+div[aria-describedby="dialog"]{
+	width:510px !important;
+}
+textarea{
+	width:480px !important;
+	height:100px;
+}
+.form-group{
+	width:196px;
+	margin-right:5px;
+}
+#dialog span{
+	font-size:16px;
+	weight:700px;
 }

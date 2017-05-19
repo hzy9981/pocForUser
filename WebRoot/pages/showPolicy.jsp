@@ -23,7 +23,6 @@ String base_Path = request.getScheme()+"://"+request.getServerName()+":"+request
 			<select id="searchCondition">
 			<option value="policyid">保单号</option>
 			<option value="policyType">保单类型</option>
-			<option value="recognizee">保险人</option>
 			<option value="plateNumber">车牌号</option>
 			</select>
 			<input id="searchContent" type="text" placeholder="请输入搜索的内容">

@@ -41,3 +41,13 @@ float:right;
 .pagination{
    float:right;
 }
+.form-control{
+	border:none;
+}
+#describe{
+	width:inherit;
+	min-height:80px;
+}
+#dialog{
+	width:auto !important;
+}
