@@ -129,7 +129,8 @@ var showClaim =function(a){
 				$("#reportPersonMobile").html(obj.reportPersonMobile);
 				$("#plateNumber").html(obj.plateNumber);
 				$("#reportTime").html(obj.reportTime);
-				$("#caseDescribe").html(obj.caseDescribe);
+				$("#caseDescribe").attr("readonly","readonly").html(obj.caseDescribe);
+				$("#reason").attr("readonly","readonly").html(obj.reason);
 			$("#dialog").dialog(); 
 			};
 		},

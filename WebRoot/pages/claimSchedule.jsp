@@ -127,9 +127,14 @@
 		<div></div>
 	    </div>
 	    
-	    <div class="form-group form-group-inline">
+	    <div class="form-group">
 	    <h2>案件描述</h2>
 		<textarea id="caseDescribe" name="caseDescribe" class="form-control"></textarea>
+	    </div>    
+	    
+	      <div class="form-group">
+	    <h2>审批原因</h2>
+		<textarea id="reason" name="reason" class="form-control"></textarea>
 	    </div>    
 	    </div>
 			<!-- 理赔单详情结束 -->

@@ -133,6 +133,8 @@ public class ClaimUserViewCommand {
 	    
 	    private String createTime;
 	    
+	    private String reason;
+	    
 	    private Assess assess;
 
 
@@ -559,5 +561,15 @@ public class ClaimUserViewCommand {
 		public void setCreateTime(String createTime) {
 			this.createTime = createTime;
 		}
+
+		public String getReason() {
+			return reason;
+		}
+
+		public void setReason(String reason) {
+			this.reason = reason;
+		}
 	    
+		
+		
 }
