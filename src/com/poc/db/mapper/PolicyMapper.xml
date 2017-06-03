@@ -37,7 +37,7 @@
   
      <select id="showAllPolicyByUserId" resultMap="BaseResultMap" parameterType="java.lang.String" >
      select 
-    policyid,policy_Type, recognizee,plate_Number,SUM,DATE_FORMAT(start_Time,'%Y年%m月%d日')start_Time,DATE_FORMAT(end_Time,'%Y年%m月%d日')end_Time
+    policyid,policy_Type, recognizee,plate_Number,SUM,DATE_FORMAT(start_Time,'%Y-%m-%d %H:%i:%s')start_Time,DATE_FORMAT(end_Time,'%Y-%m-%d %H:%i:%s')end_Time
     from policy po
     where 1=1
     <if test="policyid!=null">

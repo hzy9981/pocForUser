@@ -1,7 +1,7 @@
 <%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
-
+<?xml version="1.0" encoding="UTF-8"?>  
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
   <head>
     
     <title>常见问题</title>
@@ -48,11 +48,11 @@
 			</div>
 			<!-- 常见问题目录end -->
 			<!-- 常见问题内容start -->
-			<div class="queAnswer">
-			
-			
-			
+			<div class="queAnswer" id="console-container">
+                         <div id="console"></div>  
 			</div>
+			<br>
+            <input type="text" placeholder="请输入内容" id="chat" />  
 			<!-- 常见问题内容end -->
 			</div>
 			</div>
