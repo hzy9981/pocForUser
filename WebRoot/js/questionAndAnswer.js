@@ -38,9 +38,9 @@ Chat.connect = (function(host) {
 
 Chat.initialize = function() {  
     if (window.location.protocol == 'http:') {  
-        Chat.connect('ws://' + window.location.host + '/socketTest3/websocket/chat/'+nickname);  
+        Chat.connect('ws://' + window.location.host + '/socketServerForPoc/websocket/chat/'+nickname);  
     } else {  
-        Chat.connect('wss://' + window.location.host + '/socketTest3/websocket/chat/'+nickname);  
+        Chat.connect('wss://' + window.location.host + '/socketServerForPoc/websocket/chat/'+nickname);  
     }  
 };  
 
