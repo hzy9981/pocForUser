@@ -91,7 +91,7 @@ function validateClaimApplicationForm(){
         			type:"POST",
         			data:$("#claimApplicationForm").serialize(),
         			success:function(){
-        				alert(1);
+        				alert("提交成功");
         			},
         			error:function(data,XMLHttpRequest, textStatus, errorThrown){
         				alert("服务器异常请稍后再试");

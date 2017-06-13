@@ -89,7 +89,7 @@ public class UserServiceImpl implements UserService{
 	public void insertClaim(Claim claim,HttpServletRequest request) {
 		// TODO Auto-generated method stub
 		claim.setApplyUser(CookieUtil.getCookieByName(request,"loginedUserId").getValue().split(",")[0]);
-		claim.setStatus("待审批");//0表示用户申请,1表示审核成功
+		claim.setStatus("0");//0表示用户申请,1表示审核成功
 		Date date = new Date();
 		SimpleDateFormat myformat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss");
 		claim.setClaimTime(myformat.format(date));

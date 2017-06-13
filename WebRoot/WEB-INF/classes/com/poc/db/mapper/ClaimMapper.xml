@@ -134,7 +134,6 @@
     and cl.caseid = #{caseid}
     </if>
      and cl.apply_User = #{applyUser}
-     and cl.caseid = ass.caseid
   </select>
   
   
